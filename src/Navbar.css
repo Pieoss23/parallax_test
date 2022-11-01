@@ -1,0 +1,33 @@
+button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.box__navbar .navbar .burger__navbar .menu__navbar {
+  position: fixed;
+}
+
+.box__navbar {
+  z-index: 1;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background-size: cover;
+  background-image: url("./img/snow.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.5s;
+}
+
+.burger__navbar{
+    z-index: 3;
+    top: 0;
+    right: 0;
+    display: grid;
+    place-items: center;
+    width: 72px;
+    height: 72px;
+}

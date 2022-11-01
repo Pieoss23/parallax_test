@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Parallax } from "react-parallax";
+
+import landScape from "./img/snowy_peaks.jpg";
+import forest from "./img/fog_forest.jpg";
+import train from "./img/train_snow_landscape.jpg";
+// import Navbar from "./Navbar";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Navbar /> */}
+      <Parallax strength={200} bgImage={landScape}>
+        <div className="content">
+          <div className="text-content">Normal Parallax</div>
+        </div>
+      </Parallax>
+      <Parallax strength={1200} blur={{ min: -5, max: 5 }} bgImage={train}>
+        <div className="content">
+          <div className="text-content">Blur parallax</div>
+        </div>
+      </Parallax>
+
+      <Parallax strength={-200} bgImage={forest}>
+        <div className="content">
+          <div className="text-content">Reverse Parallax</div>
+        </div>
+      </Parallax>
+
+      <div className="content"></div>
     </div>
   );
 }
