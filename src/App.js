@@ -15,7 +15,7 @@ function App() {
           <div className="text-content">Normal Parallax</div>
         </div>
       </Parallax>
-      <Parallax strength={1200} blur={{ min: -5, max: 5 }} bgImage={train}>
+      <Parallax strength={200} blur={{ min: -5, max: 5 }} bgImage={train}>
         <div className="content">
           <div className="text-content">Blur parallax</div>
         </div>
